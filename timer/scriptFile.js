@@ -1,4 +1,6 @@
 
+// set Time programme
+var input = prompt("How many minute do you want to set: ");
 function countDown(seconds,elemts){
     var elements = document.getElementById("elemts");
     elements.innerHTML = "please wait for " + seconds+ " seconds";
@@ -12,7 +14,7 @@ function countDown(seconds,elemts){
   }
 }
 
-countDown( 10, "elemts");
+countDown( input, "elemts");
 
 /*function you(){
    document.getElementById("timeContainer").innerHTML="i love you javaScript";
