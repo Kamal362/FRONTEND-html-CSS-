@@ -1,0 +1,83 @@
+*{
+    background-color:aquamarine;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+body{
+
+    background-image: url(images/5.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    animation: ima 10s infinite;
+    background-position: center;
+    border-radius:20px; 
+}
+.h{
+   display: inline-block;
+   width: 100px;
+   height: 60px;
+   background-color: rgb(68, 14, 216);
+   color: white;
+   font-family: cursive;
+   font-size: 50px;
+   font-weight: bold;
+   padding: 5px;
+   list-style: none;
+   animation: man 10s infinite;
+   text-align: center;
+  
+}
+
+@keyframes ima{
+    from{
+        background-size: 0% 0%;
+    }
+    to{
+        background-size: 100% 100%; 
+    }
+}
+@keyframes man{
+    from{
+        background-color: blueviolet;
+        padding-left:0; 
+    }
+    to{
+        background-color: rgb(57, 0, 148);
+        padding-right: 20%;
+    }
+}
+.imageContt1{
+width: 180px;
+height: 450px;
+float:left;
+}
+.imageContt2{
+    width: 180px;
+    height: 450px;
+    float:right;
+    }
+.imageCont1{
+    width: 170px;
+    height: 103px;
+    display: block;
+    margin: 2px;
+    border-radius: 50%;
+}
+.imageCont2{
+    width: 170px;
+    height: 103px;
+    display: block;
+    margin: 2px;
+    border-radius: 50%;
+}
+
+#copy{
+    clear: both;
+    width:400px;
+    height:30px;
+    text-align: center;
+    margin-left: 30%;
+    border-radius:100px;
+}
