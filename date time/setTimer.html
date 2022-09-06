@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --txt-color:#fff;
+            --timer-box:#1c2451;
+            --timer-text:#085391;
+        }
+        body{
+            height: 100vh;
+            color: var(--timer-text);
+            font-family: sans-serif;
+        }
+        .container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .header{
+            font-size: 3rem;
+            font-weight: 300;
+            border-bottom: 1px solid #ccc;
+
+         }
+       .timer{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           
+       }
+       .box{
+           display: flex;
+           flex-direction: row;
+           padding-top: 20px;
+           text-align: center;
+           
+       }
+       span{
+           font-size: 40px;
+           font-weight: 900;
+       }
+       .timer_box{
+           justify-content: space-between;
+       }
+       #days,#hours,#minutes,#seconds{
+           padding: 10px;
+           /* margin: 5px; */
+           background: black;
+           color: #fff;
+           border-radius: 3px;
+       }
+       .timer_text{
+           margin: 15px;
+           padding: 10px;
+           background: var(--timer-box);
+           color: #fff;
+           border-radius: 20px;
+       }
+        */ 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Countdown Started</div>
+        <div class="timer">
+          <div class="box">
+            <div class="timer_box">
+                <span id="days">0</span>
+                <div class="timer_text">Days</div>
+            </div>
+            <div class="timer_box">
+                <span id="hours">0</span>
+                <div class="timer_text">Hours</div>
+            </div>
+            <div class="timer_box">
+                <span id="minutes">0</span>
+                <div class="timer_text">Minutes</div>
+            </div>
+            <div class="timer_box">
+                <span id="seconds">0</span>
+                <div class="timer_text">Seconds</div>
+            </div>
+          </div>  
+        </div>
+    </div>
+    <script>
+        var days = document.querySelector('#days');
+        var hours = document.querySelector('#hours');
+        var minutes = document.querySelector('#minutes');
+        var seconds = document.querySelector('#seconds');
+        var header = document.querySelector('.header');
+       // seconds.innerHTML = 14;
+        
+        
+        
+            const date = new Date();
+            let d = date.getDay();
+            let h = date.getHours();
+            let m = date.getMinutes();
+            let s = date.getSeconds();
+
+            days.innerHTML = d;
+            hours.innerHTML = h;
+            minutes.innerHTML = m;
+            seconds.innerHTML = s;
+            
+           const countDown = setInterval(()=>{
+                 s--;
+                 seconds.innerHTML = s;
+
+                 if(s == 0) {
+                     s = 60;
+                     m--;
+                     minutes.innerHTML = m;
+                 } 
+                 if(m == 0){
+                     m = 60;
+                     h--;
+                     hours.innerHTML = h;
+                 }
+                 if (h == 0){
+                     h = 24;
+                     d--;
+                 }
+                 if(d == 0){
+                     clearInterval(countDown);
+                     header.innerHTML = "congrats! countdown completed!" 
+                 }
+            }, 1000);
+
+   </script>
+</body>
+</html>

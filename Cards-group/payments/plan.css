@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #f9c48b 0%, #f490f1 100%);
+}
+
+.card {
+    height: 450px;
+    width: 250px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+    margin: 0 5px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    transition: transform 0.4s;
+}
+
+.card:hover{
+    transform: scale(1.2);
+    z-index: 1000;
+}
+
+.card .price{
+    height: 150px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:nth-child(1) .price{
+    background: linear-gradient(to right, var(--clr1), var(--clr2)), url("https://images.unsplash.com/photo-1517732306149-e8f829eb588a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80") center center/cover;
+}
+.card:nth-child(2) .price{
+    background: linear-gradient(to right, var(--clr1), var(--clr2)), url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80") center center/cover;
+}
+.card:nth-child(3) .price{
+    background: linear-gradient(to right, var(--clr1), var(--clr2)), url("https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80") center center/cover;
+}
+
+.card .price h1{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.card .price h2{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.card .price p{
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: -10px;
+}
+
+.card svg{
+    position: absolute;
+    top: 110px;
+}
+
+.card .details{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .details h2{
+    color: var(--text);
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.card .details .options{
+    text-align: center;
+}
+
+.card .details .options h4{
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.card input{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background: #bbb;
+}
+
+.card:hover input{
+    background: linear-gradient(to right, var(--clr1), var(--clr2));
+}
